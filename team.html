@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team - Grocery Dashboard</title>
+  <link rel="stylesheet" href="css/team.css" />
+  <link rel="stylesheet" href="css/salsedash.css.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="img/white-logo.png" alt="">
+      <span class="logo_name">ShopGrocery</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="salesDashBoard.html" >
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="product.html">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Product</span>
+        </a>
+      </li>
+      <li>
+        <a href="order.html">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Order list</span>
+        </a>
+      </li>
+      <li>
+        <a href="analytic.html">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="stock.html">
+          <i class='bx bx-coin-stack'></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Total order</span>
+        </a>
+      </li>
+      <li>
+        <a href="team.html" class="active">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="message.html">
+          <i class='bx bx-message'></i>
+          <span class="links_name">Messages</span>
+          <span class="notify">6</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart'></i>
+          <span class="links_name">Favrorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Setting</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" class="log-out" id="log-out" onclick="logout()"">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="Shops/foodcity.jpeg" alt="">
+                <span class="admin_name">Food City</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+    </section>
+  <!-- Team Section -->
+  <div class="team-section">
+    <h2 class="section-title">Meet Our Team</h2>
+    <p class="section-subtitle">The passionate team behind your favorite grocery store</p>
+
+    <div class="team-container">
+      <div class="team-member">
+        <div class="team-photo-wrapper">
+          <img src="images/team/kumar.jpeg" alt="kumar" class="team-photo">
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">Kumaramuthu</h3>
+          <p class="role">Store Manager</p>
+          <p class="description">kumar ensures smooth day-to-day operations, offering customers the best shopping experience.</p>
+          <a href="mailto:johndoe@example.com" class="contact-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-photo-wrapper">
+          <img src="images/team/ram.webp" alt="ram" class="team-photo">
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">Ram</h3>
+          <p class="role">Inventory Manager</p>
+          <p class="description">Ram ensures the perfect balance of stock, ensuring availability for all our customers.</p>
+          <a href="mailto:janesmith@example.com" class="contact-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-photo-wrapper">
+          <img src="images/team/priya.jpeg" alt="priya" class="team-photo">
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">Priya</h3>
+          <p class="role">Customer Service</p>
+          <p class="description">Priya takes care of customer inquiries and ensures all concerns are addressed promptly.</p>
+          <a href="mailto:alicejohnson@example.com" class="contact-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-photo-wrapper">
+          <img src="images/team/sara.jpeg" alt="sara" class="team-photo">
+        </div>
+        <div class="member-info">
+          <h3 class="member-name">Saradha</h3>
+          <p class="role">Sales Associate</p>
+          <p class="description">Saradha assists customers with finding products and ensures they have a great shopping experience.</p>
+          <a href="mailto:bobbrown@example.com" class="contact-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="js/dashboard.js"></script>
+</html>

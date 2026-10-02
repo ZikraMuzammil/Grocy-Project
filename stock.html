@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stock.css" />
+    <link rel="stylesheet" href="css/salsedash.css.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Stock Details</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+          <img src="img/white-logo.png" alt="">
+          <span class="logo_name">ShopGrocery</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="salesDashBoard.html" >
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="product.html">
+              <i class='bx bx-box'></i>
+              <span class="links_name">Product</span>
+            </a>
+          </li>
+          <li>
+            <a href="order.html">
+              <i class='bx bx-list-ul'></i>
+              <span class="links_name">Order list</span>
+            </a>
+          </li>
+          <li>
+            <a href="analytic.html">
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span class="links_name">Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="stock.html" class="active">
+              <i class='bx bx-coin-stack'></i>
+              <span class="links_name">Stock</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-book-alt'></i>
+              <span class="links_name">Total order</span>
+            </a>
+          </li>
+          <li>
+            <a href="team.html">
+              <i class='bx bx-user'></i>
+              <span class="links_name">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="message.html">
+              <i class='bx bx-message'></i>
+              <span class="links_name">Messages</span>
+              <span class="notify">6</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-heart'></i>
+              <span class="links_name">Favrorites</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="links_name">Setting</span>
+            </a>
+          </li>
+          <li class="log_out">
+            <a href="#" class="log-out" id="log-out" onclick="logout()"">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="Shops/foodcity.jpeg" alt="">
+                <span class="admin_name">Food City</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+    </section>
+
+<div class="stock-container">
+    <h1 class="header-title"> Grocery Shop - Stock Overview</h1>
+
+    <div class="stock-card">
+        <h2 class="section-title"> Stock Details</h2>
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>In Stock</th>
+                    <th>Reorder Level</th>
+                    <th>Unit Price (Rs.)</th>
+                    <th>Total Value (Rs.)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Organic Apples</td>
+                    <td>Fruits</td>
+                    <td>120</td>
+                    <td>50</td>
+                    <td>120</td>
+                    <td>14,400</td>
+                    <td class="green">Sufficient</td>
+                </tr>
+                <tr>
+                    <td>Whole Milk</td>
+                    <td>Dairy</td>
+                    <td>28</td>
+                    <td>40</td>
+                    <td>250</td>
+                    <td>7,000</td>
+                    <td class="red">Low</td>
+                </tr>
+                <tr>
+                    <td>Brown Bread</td>
+                    <td>Bakery</td>
+                    <td>65</td>
+                    <td>30</td>
+                    <td>180</td>
+                    <td>11,700</td>
+                    <td class="orange">Restocking Soon</td>
+                </tr>
+                <tr>
+                    <td>Almond Butter</td>
+                    <td>Snacks</td>
+                    <td>200</td>
+                    <td>100</td>
+                    <td>950</td>
+                    <td>190,000</td>
+                    <td class="green">Sufficient</td>
+                </tr>
+                <tr>
+                    <td>Basmati Rice</td>
+                    <td>Grains</td>
+                    <td>150</td>
+                    <td>80</td>
+                    <td>190</td>
+                    <td>28,500</td>
+                    <td class="green">Sufficient</td>
+                </tr>
+                <tr>
+                    <td>Carrots</td>
+                    <td>Vegetables</td>
+                    <td>40</td>
+                    <td>50</td>
+                    <td>80</td>
+                    <td>3,200</td>
+                    <td class="red">Low</td>
+                </tr>
+                <tr>
+                    <td>Orange Juice</td>
+                    <td>Beverages</td>
+                    <td>55</td>
+                    <td>40</td>
+                    <td>300</td>
+                    <td>16,500</td>
+                    <td class="green">Sufficient</td>
+                </tr>
+                <tr>
+                    <td>Cheddar Cheese</td>
+                    <td>Dairy</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>600</td>
+                    <td>12,000</td>
+                    <td class="red">Low</td>
+                </tr>
+                <tr>
+                    <td>Green Tea</td>
+                    <td>Beverages</td>
+                    <td>100</td>
+                    <td>60</td>
+                    <td>150</td>
+                    <td>15,000</td>
+                    <td class="green">Sufficient</td>
+                </tr>
+                <tr>
+                    <td>Tomato Ketchup</td>
+                    <td>Condiments</td>
+                    <td>35</td>
+                    <td>40</td>
+                    <td>220</td>
+                    <td>7,700</td>
+                    <td class="orange">Restocking Soon</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script src="js/dashboard.js"></script>
+</html>

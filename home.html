@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Project</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> ShopGrocery </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">Archives</a>
+            <a href="#products">About Us</a>
+            <a href="#categories">Shops</a>
+            <a href="#review">review</a>
+            <a href="#My Account" href="javascript:void(0);" onclick="toggleAccount()">My Account</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn">
+                <span class="cart-item-count"></span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p>forget your password <a href="#">click here</a></p>
+            <p>don't have an account <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+        
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Welcome to <span> ShopGrocery </span> </h3>
+            <p>Shop from multiple vendors in one place with ease. Fast, convenient, and hassle-free grocery shopping at your fingertips!</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+    </section>
+
+    <section class="features" id="features">
+
+        <h1 class="heading"> our <span>Archives</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>2500+</h3>
+                <p>Customers</p>
+            </div>
+
+            <div class="box">
+                <h3>6000+</h3>
+                <p>Products</p>
+            </div>
+
+            <div class="box">
+                <h3>20+</h3>
+                <p>island Wide Connected Grocery Shops</p>
+            </div>
+            <a href="#" class="btn"></a>
+
+
+        </div>
+
+    </section>
+
+    <section class="features" id="features">
+
+        <h1 class="heading"> Connected <span>Shops</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h1>Food City</h1>
+                <img src="Shops/foodcity.jpeg" alt="">
+                <a a href="shop.html?connected=Foodcity" class="btn"  onclick="notifyShop('Food City')"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Keels Super</h1>
+                <img src="Shops/keels.jpeg" alt="">
+                <a href="shop.html?connected=Keels Super" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Softlogic Glomark</h1>
+                <img src="Shops/softlogic.jpeg" alt="">
+                <a href="shop.html?connected=Softlogic Glomark" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Arpico</h1>
+                <img src="Shops/arpico.jpg" alt="">
+                <a href="shop.html?connected=Arpico" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Araliya Super Market</h1>
+                <img src="Shops/araliya.jpg" alt="">
+                <a href="shop.html?connected=Araliya Super Market" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Organic Green Care</h1>
+                <img src="Shops/greencare.jpg" alt="">
+                <a href="shop.html?connected=Organic Green Care" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Laugfs Super</h1>
+                <img src="Shops/laugfs.png" alt="">
+                <a href="shop.html?connected=Laugfs Super" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Lanka Sathosa</h1>
+                <img src="Shops/sathosa.jpg" alt="">
+                <a href="shop.html?connected=Lanka Sathosa" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>RTS Tea & Groceries</h1>
+                <img src="Shops/rts.png" alt="">
+                <a href="shop.html?connected=RTS Tea & Groceries" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Cargils</h1>
+                <img src="Shops/cargils.png" alt="">
+                <a href="shop.html?connected=Cargils" class="btn"> Start Shopping</a>
+            </div>
+
+            <div class="box">
+                <h1>Premasiri Super Market</h1>
+                <img src="Shops/premasiri.jpg" alt="">
+                <a href="shop.html?connected=Premasiri Super Market" class="btn"> Start Shopping</a>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <section class="account" id="account-section">
+        <div class="account-container">
+          <!-- Header -->
+          <div class="account-header">
+            <h2><i class="fas fa-user-circle"></i> Welcome Back, <span>Harisuthan</span></h2>
+            <p>Your personalized grocery hub 🛒</p>
+          </div>
+      
+          <!-- Profile Info -->
+          <div class="section-title"><i class="fas fa-id-card-alt"></i> Profile Details</div>
+          <div class="profile-info">
+            <div class="profile-box"><i class="fas fa-user"></i> <strong>Name:</strong> Harisuthan</div>
+            <div class="profile-box"><i class="fas fa-envelope"></i> <strong>Email:</strong> harisuthan076@gmail.com</div>
+            <div class="profile-box"><i class="fas fa-phone"></i> <strong>Phone:</strong> +94 7653455765</div>
+            <div class="profile-box"><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Hatton, Nuwara Eliya, Sri Lanka</div>
+          </div>
+      
+          <!-- Orders -->
+          <div class="section-title"><i class="fas fa-store"></i> Shop-Wise Orders</div>
+          <div class="orders-grid">
+      
+            <!-- Order Card 1 -->
+            <div class="order-card">
+              <div class="shop-header">
+                <img src="Shops/foodcity.jpeg" alt="Food City Logo">
+                <div>
+                  <h3>Food City</h3>
+                  <p>Groceries & Essentials</p>
+                </div>
+              </div>
+              <div class="order-details">
+                <p><strong>Order ID:</strong> FC-1023</p>
+                <p><strong>Date:</strong> 2025-04-12</p>
+                <p><strong>Status:</strong> <span class="status delivered">Delivered</span></p>
+                <p><strong>Total:</strong> Rs. 2,350</p>
+              </div>
+              <a href="shop.html?connected=Foodcity" class="shop-btn">🛍️ Shop Again</a>
+            </div>
+      
+            <!-- Order Card 2 -->
+            <div class="order-card">
+              <div class="shop-header">
+                <img src="Shops/keels.jpeg" alt="Keels Super Logo">
+                <div>
+                  <h3>Keels Super</h3>
+                  <p>Fresh Produce & Daily Needs</p>
+                </div>
+              </div>
+              <div class="order-details">
+                <p><strong>Order ID:</strong> KS-8821</p>
+                <p><strong>Date:</strong> 2025-04-10</p>
+                <p><strong>Status:</strong> <span class="status shipped">Shipped</span></p>
+                <p><strong>Total:</strong> Rs. 4,800</p>
+              </div>
+              <a href="shop.html?connected=Keels Super" class="shop-btn">🛍️ Shop Again</a>
+            </div>
+      
+            <!-- Order Card 3 -->
+            <div class="order-card">
+              <div class="shop-header">
+                <img src="Shops/softlogic.jpeg" alt="Glomark Logo">
+                <div>
+                  <h3>Glomark</h3>
+                  <p>Premium Lifestyle & Grocery</p>
+                </div>
+              </div>
+              <div class="order-details">
+                <p><strong>Order ID:</strong> SG-3021</p>
+                <p><strong>Date:</strong> 2025-04-05</p>
+                <p><strong>Status:</strong> <span class="status processing">Processing</span></p>
+                <p><strong>Total:</strong> Rs. 1,750</p>
+              </div>
+              <a href="shop.html?connected=Softlogic Glomark" class="shop-btn">🛍️ Shop Again</a>
+            </div>
+      
+          </div>
+      
+          <!-- Buttons -->
+          <div class="btns">
+            <button onclick="openEditProfile()"><i class="fas fa-user-edit"></i> Edit Profile</button>
+            <button onclick="location.href='order-history.html'"><i class="fas fa-history"></i> Order History</button>
+            <button onclick="location.href='logout.html'"><i class="fas fa-sign-out-alt"></i> Logout</button>
+          </div>
+        </div>
+    </section>
+      
+    <section class="edit-profile-section" id="edit-profile-section">
+        <div class="edit-container" id="edit-profile-container">
+            <!-- Header -->
+            <div class="profile-header" id="profile-header">
+                <h2><i class="fas fa-user-edit"></i> Edit Your Profile</h2>
+                <p>Update your personal details below 📝</p>
+            </div>
+    
+            <!-- Edit Profile Form -->
+            <form class="edit-profile-form" id="edit-profile-form" action="save-profile.html" method="POST">
+                <div class="input-group" id="input-group-name">
+                    <label for="full-name" class="input-label"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="full-name" name="name" value="Harisuthan" class="form-input" required>
+                </div>
+    
+                <div class="input-group" id="input-group-email">
+                    <label for="email-address" class="input-label"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email-address" name="email" value="harisuthan076@gmail.com" class="form-input"
+                        required>
+                </div>
+    
+                <div class="input-group" id="input-group-phone">
+                    <label for="phone-number" class="input-label"><i class="fas fa-phone"></i> Phone</label>
+                    <input type="tel" id="phone-number" name="phone" value="+94 7653455765" class="form-input" required>
+                </div>
+    
+                <div class="input-group" id="input-group-address">
+                    <label for="user-address" class="input-label"><i class="fas fa-map-marker-alt"></i> Address</label>
+                    <input type="text" id="user-address" name="address" value="Hatton, Nuwara Eliya, Sri Lanka"
+                        class="form-input" required>
+                </div>
+    
+                <!-- Form Buttons -->
+                <div class="form-buttons" id="form-buttons">
+                    <button type="submit" class="save-btn"><i class="fas fa-save"></i> Save Changes</button>
+                    <button type="button" class="cancel-btn" onclick="closeEditProfile()"><i
+                            class="fas fa-times-circle"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </section>
+      
+
+        
+    
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> customer's <span>review</span> </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-1.png" alt="">
+                    <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff
+                        from here.</p>
+                    <h3>john</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-2.png" alt="">
+                    <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff
+                        from here.</p>
+                    <h3>Juliyana</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-3.png" alt="">
+                    <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff
+                        from here.</p>
+                    <h3>Jonathon</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="image/pic-4.png" alt="">
+                    <p>Very good website. All the stuff on this website is absolutely great. You all can buy your stuff
+                        from here.</p>
+                    <h3>Oliveya</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> Grocery <i class="fas fa-shopping-basket"></i> </h3>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +94 7653455765 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +94 7440026484 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> Harisuthan076@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Srilanka , Nuwaraeliya - hatton - 05
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe"</br>
+                <a href="#" class="btn">click</a>
+                
+                
+                 
+            <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span> Harisuthan </span> | all rights reserved </div>
+
+    </section>
+
+
+
+</body>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+
+    
+</html>

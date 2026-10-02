@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery Dashboard</title>
+  <link rel="stylesheet" href="css/analytic.css" />
+  <link rel="stylesheet" href="css/salsedash.css.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="img/white-logo.png" alt="">
+      <span class="logo_name">ShopGrocery</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="salesDashBoard.html" >
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="product.html">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Product</span>
+        </a>
+      </li>
+      <li>
+        <a href="order.html">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Order list</span>
+        </a>
+      </li>
+      <li>
+        <a href="analytic.html" class="active">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="stock.html">
+          <i class='bx bx-coin-stack'></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Total order</span>
+        </a>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="message.html">
+          <i class='bx bx-message'></i>
+          <span class="links_name">Messages</span>
+          <span class="notify">6</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart'></i>
+          <span class="links_name">Favrorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Setting</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" class="log-out" id="log-out" onclick="logout()"">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search'></i>
+      </div>
+      <div class="profile-details">
+        <img src="Shops/foodcity.jpeg" alt="">
+        <span class="admin_name">Food City</span>
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </nav>
+  </section>
+  <div class="container">
+    <div class="header">
+      <div class="greeting">
+        <h1>Hello, Admin </h1>
+        <p>Here's your grocery store summary today</p>
+      </div>
+      <input type="text" placeholder="Search..." class="search-bar">
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards">
+      <div class="card">
+        <h2 class="title">Total Sales</h2>
+        <p class="value">₨ 2,436,750</p>
+        <p class="note">+12% from last week</p>
+      </div>
+      <div class="card">
+        <h2 class="title">Orders</h2>
+        <p class="value">1,342</p>
+        <p class="note">+6% from last week</p>
+      </div>
+      <div class="card">
+        <h2 class="title">Customers</h2>
+        <p class="value">782</p>
+        <p class="note">New: 43 today</p>
+      </div>
+      <div class="card">
+        <h2 class="title">Products</h2>
+        <p class="value">156</p>
+        <p class="note">Low stock: 12</p>
+      </div>
+    </div>
+
+    <!-- Revenue Summary -->
+    <div class="summary">
+      <h2 class="title">Revenue Overview</h2>
+      <p class="subtitle">Weekly revenue chart (Updated: April 21, 2025)</p>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-card">
+      <canvas id="revenueChart" height="100"></canvas>
+    </div>
+
+    <!-- Inventory Stats -->
+    <div class="cards">
+      <div class="card">
+        <h2 class="title">Top Selling Product</h2>
+        <p class="value">Organic Apples</p>
+        <p class="note">Sold: 320 units</p>
+      </div>
+      <div class="card">
+        <h2 class="title">Most Viewed</h2>
+        <p class="value">Almond Milk</p>
+        <p class="note">Views: 1,210</p>
+      </div>
+    </div>
+
+    <!-- Orders Table -->
+    <div class="table-card">
+      <h2 class="title">Recent Orders</h2>
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1023</td>
+            <td>Jane Doe</td>
+            <td>₨ 9,150.50</td>
+            <td class="green">Completed</td>
+            <td>April 20</td>
+          </tr>
+          <tr>
+            <td>#1024</td>
+            <td>John Smith</td>
+            <td>₨ 6,350.00</td>
+            <td class="orange">Pending</td>
+            <td>April 21</td>
+          </tr>
+          <tr>
+            <td>#1025</td>
+            <td>Alice Johnson</td>
+            <td>₨ 13,500.00</td>
+            <td class="red">Cancelled</td>
+            <td>April 21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/analytic.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

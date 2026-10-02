@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Project</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> AShopGrocery</a>
+
+        <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="#features">features</a>
+            <div class="dropdown">
+                <button class="dropbtn">Categories</button>
+                <div class="dropdown-content">
+                    <a href="fresh.html">Fresh Products</a>
+                    <a href="bakery & Dairy.html">Bakery & Dairy</a>
+                    <a href="meet.html">Meet & Sea foods</a>
+                    <a href="frozen.html">Frozen Foods</a>
+                    <a href="pantry.html">Pantry Staples</a>
+                    <a href="snack.html">Snacks & Beverages</a>
+                    <a href="clean.html">Household & Cleaning</a>
+                    <a href="care.html">Personal care & Health</a>
+                    <a href="pet.html">Pet Supplies</a>
+                    <a href="baby.html">Baby & Kids</a>
+                </div>
+            </div>
+            <a href="#categories">Products</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn">
+                <span class="cart-item-count"></span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content">
+                <!--<<div class="cart-box">
+                <img src="image/product-4.png" alt="" class="cart-img">
+                <div class="cart-detail" >
+                    <div class="cart-product-title">Fresh cabbage</div>
+                    <span class="cart-price"> Rs.300.00/=</span>
+                    <div class="cart-qty">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <button type="reset" class="remove"> remove </button>
+            </div> -->
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">Rs0</div>
+
+            </div>
+            <button class="btn-buy" onclick="openPopup()">Buy Now</button>
+            <i class="fa-solid fa-circle-xmark" style="color: #000000;" id="cart-close"></i>
+
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p>forget your password <a href="#">click here</a></p>
+            <p>don't have an account <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+
+    </header>
+
+    <section class="categories" id="categories">
+
+        <h1 class="heading"> Bakery & <span>Dairy</span> </h1>
+        <h2 class="subheading"><span>Bakery</span>  Products</h2>
+
+        <h2 class="subheading">Breads</h2>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="Bakery & Dairy/white bread.webp" alt="">
+                <h3 class="product-title">White Bread || 1 </h3>
+                <p class="price">Rs.160/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Whole wheat bread.jpeg" alt="">
+                <h3 class="product-title">Whole wheat bread || 1 </h3>
+                <p class="price"> Rs.130/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Multigrain bread.png" alt="">
+                <h3 class="product-title">Multigrain bread || 1 </h3>
+                <p class="price"> Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Buns and rolls.jpeg" alt="">
+                <h3 class="product-title">Buns and rolls || 1pcs </h3>
+                <p class="price"> Rs.80/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Sourdough.jpg" alt="">
+                <h3 class="product-title">Sourdough  || 1pcs </h3>
+                <p class="price"> Rs.90/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+        </div>
+
+        <h2 class="subheading">Cakes & Pastries</h2>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Croissants.jpg" alt="">
+                <h3 class="product-title">Croissants || 1 Pcs </h3>
+                <p class="price">Rs.70/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Cupcakes.jpg" alt="">
+                <h3 class="product-title">Cupcakes || 1 Pcs </h3>
+                <p class="price"> Rs.60/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Danish pastries.jpeg" alt="">
+                <h3 class="product-title">Danish pastries|| 1 Pcs </h3>
+                <p class="price"> Rs.85/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Muffins.jpg" alt="">
+                <h3 class="product-title">Muffins || 1 </h3>
+                <p class="price"> Rs.70/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Poundcake.jpeg" alt="">
+                <h3 class="product-title">Pound cake  || 500g </h3>
+                <p class="price"> Rs.500/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Sponge cake.jpeg" alt="">
+                <h3 class="product-title">Sponge Cake || 1Kg </h3>
+                <p class="price"> Rs.900/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Swiss Roll chocolate.jpeg" alt="">
+                <h3 class="product-title"> Swiss Roll chocolate|| 500g </h3>
+                <p class="price"> Rs.250/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Swiss Roll strawberrr.jpeg" alt="">
+                <h3 class="product-title">Swiss Roll strawbery || 500g </h3>
+                <p class="price"> Rs.250/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cakes/Swiss Roll venilla.jpeg" alt="">
+                <h3 class="product-title">OrangeSwiss Roll venilla || 500g </h3>
+                <p class="price"> Rs.200/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+        </div>
+
+        <h2 class="subheading">Cookies & Biscuits</h2>
+        <h2 class="subheading"><span>Munchee</span></h2>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/buiscut gift pack 1.jpeg" alt="">
+                <h3 class="product-title">Buiscut gift pack || 1 </h3>
+                <p class="price">Rs.850/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/buiscut gift pack 2.webp" alt="">
+                <h3 class="product-title">Buiscut gift pack || 1</h3>
+                <p class="price"> Rs.830/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/buiscut gift pack 3.webp" alt="">
+                <h3 class="product-title">Buiscut gift pack || 1</h3>
+                <p class="price"> Rs.750/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/carrol 300g.jpeg" alt="">
+                <h3 class="product-title">Munchee Carrol || 300g </h3>
+                <p class="price"> Rs.180/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/chocolate buff 200g.jpeg" alt="">
+                <h3 class="product-title">Chocolate Puff  || 200g </h3>
+                <p class="price"> Rs.140/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/chocolate cream.jpg" alt="">
+                <h3 class="product-title">Chocolate Cream || 400g </h3>
+                <p class="price"> Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/chocolate marie 400g.jpg" alt="">
+                <h3 class="product-title">Chocolate Marie  || 400g </h3>
+                <p class="price"> Rs.200/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/chocolate marie 90g.jpeg" alt="">
+                <h3 class="product-title">Chocolate Marie  || 90g  </h3>
+                <p class="price"> Rs.120/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/chocolate wafers 400g.jpeg" alt="">
+                <h3 class="product-title">Chocolate wafers  || 400g  </h3>
+                <p class="price"> Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/chocolate wafers 85g.jpeg" alt="">
+                <h3 class="product-title">Chocolate wafers  || 85g  </h3>
+                <p class="price"> Rs.110/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/Cream Cracker 125g.jpg" alt="">
+                <h3 class="product-title">Cream Cracker|| 125g </h3>
+                <p class="price"> Rs.140/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/Cream Cracker 190g.jpeg" alt="">
+                <h3 class="product-title">Cream Cracker|| 190g </h3>
+                <p class="price"> Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/Cream Cracker 500g.gif" alt="">
+                <h3 class="product-title">Cream Cracker || 500g </h3>
+                <p class="price">Rs.310/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/Cream Cracker 85g.jpeg" alt="">
+                <h3 class="product-title">Cream Cracker || 85g </h3>
+                <p class="price">Rs.95/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/ginger.jpeg" alt="">
+                <h3 class="product-title">Ginger Buiscut || 100g </h3>
+                <p class="price">Rs.95/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/lemon puff 100g.jpeg" alt="">
+                <h3 class="product-title">Lemon puff  || 100g </h3>
+                <p class="price">Rs.95/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/lemon puff.png" alt="">
+                <h3 class="product-title">Lemon puff  || 200g </h3>
+                <p class="price">Rs.130/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/mink bis 200g.jpeg" alt="">
+                <h3 class="product-title">Milk short cake  || 200g </h3>
+                <p class="price">Rs.140/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/mink bis 85g.webp" alt="">
+                <h3 class="product-title">Milk short cake  || 85g </h3>
+                <p class="price">Rs.110/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/Nice.jpeg" alt="">
+                <h3 class="product-title">Nice Buiscut</h3>
+                <p class="price">Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/tikiri maari 360g.jpeg" alt=""">
+                <h3 class="product-title">Tikiri maari || 360g</h3>
+                <p class="price">Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/tikiri maari 80g.jpeg" alt=""">
+                <h3 class="product-title">Tikiri maari || 80g</h3>
+                <p class="price">Rs.100/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/venilla wafers 400g.jpeg" alt=""">
+                <h3 class="product-title">Venilla wafers || 400g</h3>
+                <p class="price">Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Munchee/venilla wafers 85g.jpeg" alt=""">
+                <h3 class="product-title">Venilla wafers || 80g</h3>
+                <p class="price">Rs.100/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+        </div>
+
+        <h2 class="subheading"><span>Malibann</span></h2>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/biscut gift pack 1.jpeg" alt="">
+                <h3 class="product-title">Buiscut gift pack || 1 </h3>
+                <p class="price">Rs.850/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/biscut gift pack 2.jpg" alt="">
+                <h3 class="product-title">Buiscut gift pack || 1</h3>
+                <p class="price"> Rs.830/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/bran cracker 140g.webp" alt="">
+                <h3 class="product-title">Barn Cracker || 140g</h3>
+                <p class="price"> Rs.140/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/bran cracker 210g.jpg_480Wx480H" alt="">
+                <h3 class="product-title">Barn Cracker || 210g </h3>
+                <p class="price"> Rs.190/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/chocolate puff 100g.jpeg" alt="">
+                <h3 class="product-title">Chocolate Puff  || 100g </h3>
+                <p class="price"> Rs.140/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/chocolate puff 200g.webp" alt="">
+                <h3 class="product-title">Chocolate Puff || 200g </h3>
+                <p class="price"> Rs.190/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/cream cracker 190g.jpeg" alt="">
+                <h3 class="product-title">Cream cracker   || 190g </h3>
+                <p class="price"> Rs.200/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/cream cracker 330g.jpeg" alt="">
+                <h3 class="product-title">Cream cracker   || 330g   </h3>
+                <p class="price"> Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/custard 100g.webp" alt="">
+                <h3 class="product-title">Custard Cream  || 100g  </h3>
+                <p class="price"> Rs.110/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/custard 200g.webp" alt="">
+                <h3 class="product-title">Custard Cream   || 200g  </h3>
+                <p class="price"> Rs.190/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/lemon puff 100g.webp" alt="">
+                <h3 class="product-title">Lemon puff|| 100g </h3>
+                <p class="price"> Rs.140/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/lemon puff 200g.webp" alt="">
+                <h3 class="product-title">Lemon puff|| 200g </h3>
+                <p class="price"> Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/lemon puff 400g.webp" alt="">
+                <h3 class="product-title">Lemon puff|| 400g </h3>
+                <p class="price">Rs.310/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/nice 100g.jpg" alt="">
+                <h3 class="product-title">Nice || 100g </h3>
+                <p class="price">Rs.95/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/nice 435g.jpeg" alt="">
+                <h3 class="product-title">Nice || 435g</h3>
+                <p class="price">Rs.200/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/orange cream 100g.webp" alt="">
+                <h3 class="product-title">Orange Cream  || 100g </h3>
+                <p class="price">Rs.95/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/orange cream 200g.webp" alt="">
+                <h3 class="product-title">Orange Cream  || 200g </h3>
+                <p class="price">Rs.130/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/real chocolate 100g.jpg" alt="">
+                <h3 class="product-title">Real Chocolate Cream || 100g </h3>
+                <p class="price">Rs.90/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/real chocolate 400g.webp" alt="">
+                <h3 class="product-title">Real Chocolate Cream || 400g </h3>
+                <p class="price">Rs.210/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/real coco powder 200g.gif" alt="">
+                <h3 class="product-title">Real coco || 200g </h3>
+                <p class="price">Rs.110/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/wafers chocolate 100g.jpeg" alt=""">
+                <h3 class="product-title">Chocolate Wafers || 100g</h3>
+                <p class="price">Rs.100/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/wafers chocolate cream 400g.webp" alt=""">
+                <h3 class="product-title">Chocolate Cream Wafers || 400g</h3>
+                <p class="price">Rs.230/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="Bakery & Dairy/Cookies and buscits/Maliban/wafers chocolate cream 90g.jpeg" alt=""">
+                <h3 class="product-title">Chocolate Cream Wafers || 90g</h3>
+                <p class="price">Rs.100/=</p>
+                <a href="#" class="btn">buy now</a>
+                <a href="#" class="btn add-cart" id="cart_btn">Add to Cart</a>
+            </div>
+
+        </div>
+
+        <h2 class="subheading"><span>Dairy</span>  Products</h2>
+
+    </section>
+
+    <!---payment section starts-->
+    <div class="container" id="payment">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Sri Hari">
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" placeholder="unknown123@gmail.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Street - Locality">
+                    </div>
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text" placeholder="Nawalapitiya">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span> Distric :</span>
+                            <input type="text" placeholder="Kandy">
+                        </div>
+                        <div class="input-box">
+                            <span>Zip Code :</span>
+                            <input type="number" placeholder="22000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="image/imgcards.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Name On Card :</span>
+                        <input type="text" placeholder="Mr. S . Hari">
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="number" placeholder="1111 2222 3333 4444">
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month :</span>
+                        <input type="date" placeholder="December">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>delivery Option :</span>
+                            <input type="text" placeholder="Domex">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="number" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn" id="close-payment" onclick="closePopup()">Submit</button>
+        </form>
+    </div> 
+
+    <!---payment section end-->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> Grocery <i class="fas fa-shopping-basket"></i> </h3>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +94 7653455765 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +94 7440026484 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> Harisuthan076@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Srilanka , Nuwaraeliya - hatton - 05
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span> Harisuthan </span> | all rights reserved </div>
+
+    </section>
+
+</body>
+
+<script src="js/script.js"></script>
+<script src="js/cart.js"> </script>
+<script src="js/payment.js"></script>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/salsedash.css.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="img/white-logo.png" alt="">
+      <span class="logo_name">ShopGrocery</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="salesDashBoard.html" class="active">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="product.html">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Product</span>
+        </a>
+      </li>
+      <li>
+        <a href="order.html">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Order list</span>
+        </a>
+      </li>
+      <li>
+        <a href="analytic.html">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="stock.html">
+          <i class='bx bx-coin-stack'></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Total order</span>
+        </a>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="message.html">
+          <i class='bx bx-message'></i>
+          <span class="links_name">Messages</span>
+          <span class="notify">6</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart'></i>
+          <span class="links_name">Favrorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Setting</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" class="log-out" id="log-out" onclick="logout()"">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search'></i>
+      </div>
+      <div class="profile-details">
+        <img src="Shops/foodcity.jpeg" alt="">
+        <span class="admin_name">Food City</span>
+        <i class='bx bx-chevron-down'></i>
+      </div>
+    </nav>
+  </section>
+  <div class="table-card">
+    <div class="card-title">
+      <h3 class="Product-tbl"><i class="fas fa-shopping-bag"></i> Products</h3>
+      <button class="btn btn-outline btn-sm view-btn ">
+        <i class="fas fa-eye"></i> View All
+      </button>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>P.no</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>
+            <div class="dropdown">
+              <button class="dropbtn">Category ></button>
+              <div class="dropdown-content">
+                    <a href="fresh.html">Fresh Products</a>
+                    <a href="bakery.html">Bakery & Dairy</a>
+                    <a href="meet.html">Meet & Sea foods</a>
+                    <a href="frozen.html">Frozen Foods</a>
+                    <a href="pantry.html">Pantry Staples</a>
+                    <a href="snack.html">Snacks & Beverages</a>
+                    <a href="clean.html">Household & Cleaning</a>
+                    <a href="care.html">Personal care & Health</a>
+                    <a href="pet.html">Pet Supplies</a>
+                    <a href="baby.html">Baby & Kids</a>
+              </div>
+            </div>
+          </th>
+          <th>Availability</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prdt-num">001</td>
+          <td><img src="topselling/apple.jpeg" alt=""></td>
+          <td>Apple</td>
+          <td>Fresh</td>
+          <td>400 Pcs</td>
+          <td>500g</td>
+          <td>
+            <span class="">300.00Rs</span>
+          </td>
+          <td>
+            <button class="btn btn-outline btn-sm view-btn">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button class="btn btn-outline btn-sm view-btn Remove-btn">
+              <i class="fas fa-close"></i> Remove
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="prdt-num">002</td>
+          <td><img src="topselling/anchor.jpeg" alt=""></td>
+          <td>Anchor</td>
+          <td>
+            Fresh
+          </td>
+          <td>130 Pack</td>
+          <td>400g</td>
+          <td>
+            <span class="">1300.00Rs</span>
+          </td>
+          <td>
+            <button class="btn btn-outline btn-sm view-btn">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button class="btn btn-outline btn-sm view-btn Remove-btn">
+              <i class="fas fa-close"></i> Remove
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="prdt-num">003</td>
+          <td><img src="topselling/kinderjoy.jpeg" alt=""></td>
+          <td>KinderJoy</td>
+          <td>Fresh</td>
+          <td>500 Pcs</td>
+          <td>01</td>
+          <td>
+            <span class="">560.00Rs</span>
+          </td>
+          <td>
+            <button class="btn btn-outline btn-sm view-btn">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button class="btn btn-outline btn-sm view-btn Remove-btn">
+              <i class="fas fa-close"></i> Remove
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="prdt-num">004</td>
+          <td><img src="topselling/maggi.jpeg" alt=""></td>
+          <td>maggi</td>
+          <td>Fresh</td>
+          <td>100 Pack</td>
+          <td>01</td>
+          <td>
+            <span class="">130.00Rs</span>
+          </td>
+          <td>
+            <button class="btn btn-outline btn-sm view-btn">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button class="btn btn-outline btn-sm view-btn Remove-btn">
+              <i class="fas fa-close"></i> Remove
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="prdt-num">005</td>
+          <td><img src="topselling/kitkat.jpg" alt=""></td>
+          <td>Kit-Kat</td>
+          <td>Fresh</td>
+          <td>130 Pcs</td>
+          <td>01</td>
+          <td>
+            <span class=""> 890.00Rs</span>
+          </td>
+          <td>
+            <button class="btn btn-outline btn-sm view-btn ">
+              <i class="fas fa-eye"></i> View
+            </button>
+            <button class="btn btn-outline btn-sm view-btn Remove-btn">
+              <i class="fas fa-close"></i> Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="addProductBtn" class="btn btn-outline btn-sm view-btn add-prdt">
+      <i>+</i> Add Product
+    </button>
+  </div>
+
+  <section class="Add-product-inpt">
+    <div class="container">
+      <form id="addProductForm" action="">
+        <div class="row">
+          <div class="column">
+            <h3 class="title">Product Image</h3>
+            <div class="input-box">
+              <span>Input Image</span>
+              <input type="file" placeholder="Select Image">
+            </div>
+            <div class="input-box">
+              <span>Product Name :</span>
+              <input type="Text" placeholder="Apple">
+            </div>
+            <div class="input-box">
+              <select name="Category" id="Category">
+                    <option value="">Select Category</option>
+                    <option value=""><a href="fresh.html">Fresh products</a></option>
+                    <option value=""><a href="bakery.html">Bakery & Dairy</a></option>
+                    <option value=""><a href="meet.html">Meet & Sea foods</a></option>
+                    <option value=""><a href="frozen.html">Frozen Foods</a></option>
+                    <option value=""><a href="pantry.html">Pantry Staples</a></option>
+                    <option value=""><a href="snack.html">Snacks & Beverages</a></option>
+                    <option value=""><a href="clean.html">Household & Cleaning</a></option>
+                    <option value=""><a href="care.html">Personal care & Health</a></option>
+                    <option value=""><a href="pet.html">Pet Supplies</a></option>
+                    <option value=""><a href="baby.html">Baby & Kids</a></option>
+              </select>
+            </div>
+            <div class="input-box">
+              <span> Price / Qty:</span>
+              <input type="text" placeholder="1">
+            </div>
+
+            <div class="flex">
+              <div class="input-box">
+                <span> Quantity :</span>
+                <input type="text" placeholder="4000 Pcs">
+              </div>
+              <div class="input-box">
+                <span>Quantity Type :</span>
+                <input type="text" placeholder="Kg / g / Pcs / Pack">
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="input-box">
+              <span>Availability :</span>
+              <input type="text" placeholder="300 Apples">
+            </div>
+          </div>
+        </div>
+        <div class="add-form-btns">
+          <button type="submit" class="btn Save-btn">Save</button>
+          <button type="submit" class="Close-prdt" id="Close-add">Close</button>
+        </div>
+       
+      </form>
+    </div>
+  </section>
+
+</body>
+<script src="js/dashboard.js"></script>
+<script src="js/Addproduct.js"></script>
+
+
+</html>

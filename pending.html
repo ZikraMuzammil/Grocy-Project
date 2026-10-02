@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert | Export html Table to CSV & EXCEL File</title>
+    <link rel="stylesheet" type="text/css" href="css/order.css">
+    <link rel="stylesheet" href="css/salsedash.css.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <img src="img/white-logo.png" alt="">
+          <span class="logo_name">ShopGrocery</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="salesDashBoard.html" class="active">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="product.html">
+              <i class='bx bx-box'></i>
+              <span class="links_name">Product</span>
+            </a>
+          </li>
+          <li>
+            <a href="order.html">
+              <i class='bx bx-list-ul'></i>
+              <span class="links_name">Order list</span>
+            </a>
+          </li>
+          <li>
+            <a href="analytic.html">
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span class="links_name">Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="stock.html">
+              <i class='bx bx-coin-stack'></i>
+              <span class="links_name">Stock</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-book-alt'></i>
+              <span class="links_name">Total order</span>
+            </a>
+          </li>
+          <li>
+            <a href="team.html">
+              <i class='bx bx-user'></i>
+              <span class="links_name">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="message.html">
+              <i class='bx bx-message'></i>
+              <span class="links_name">Messages</span>
+              <span class="notify">6</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-heart'></i>
+              <span class="links_name">Favrorites</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="links_name">Setting</span>
+            </a>
+          </li>
+          <li class="log_out">
+            <a href="#" class="log-out" id="log-out" onclick="logout()"">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="Shops/foodcity.jpeg" alt="">
+                <span class="admin_name">Food City</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+    </section>
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Delivered and Pending</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="images/search.png" alt="">
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"><i class='bx bxs-file-export'></i></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Location <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Action <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 1 </td>
+                        <td> <img src="images/Zinzu Chan Lee.jpg" alt="">Hari</td>
+                        <td> Hatton </td>
+                        <td> 17 Dec, 2022 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td><img src="images/Jeet Saru.png" alt=""> Vinoth </td>
+                        <td> Kandy </td>
+                        <td> 27 Aug, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 3</td>
+                        <td><img src="images/Sonal Gharti.jpg" alt=""> Abu </td>
+                        <td> Highrapura </td>
+                        <td> 14 Mar, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status pending">Pending</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 4</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Aravinth </td>
+                        <td> maskeliya </td>
+                        <td> 25 May, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 5</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Sabi </td>
+                        <td> Dholaspaha </td>
+                        <td> 23 Apr, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status pending">Pending</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 6</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Mano </td>
+                        <td> Thalawakale </td>
+                        <td> 23 Apr, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 7</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Amjad </td>
+                        <td> Nawalapitiya </td>
+                        <td> 20 May, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status pending">Pending</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 8</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Yakoob </td>
+                        <td> Ulappana </td>
+                        <td> 30 Feb, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Ahmad </td>
+                        <td> Colombo </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status pending">Pending</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Naflan </td>
+                        <td> Kandy </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <<td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Yazeen </td>
+                        <td> Hapusthalawa </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status pending">Pending</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Razeen </td>
+                        <td> Nawalapitiya </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Akif </td>
+                        <td> Gampola </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Delivered</p>
+                           
+                        </td>
+                        <td> <button class="view-order">ViewOrder</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+    </main>
+    <script src="js/order.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

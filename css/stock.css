@@ -1,0 +1,77 @@
+  .stock-container {
+    position: absolute;
+    top:0;
+    width: 80%;
+    left: 17%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title Styling */
+  .header-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #374151;
+  }
+  
+  /* Table Styling */
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .stock-table th,
+  .stock-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 16px;
+  }
+  
+  .stock-table thead {
+    background-color: #f0f4f8;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .stock-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background 0.3s ease;
+  }
+  
+  .stock-table td {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Status Coloring */
+  .green {
+    color: #16a34a;
+    font-weight: bold;
+  }
+  
+  .red {
+    color: #dc2626;
+    font-weight: bold;
+  }
+  
+  .orange {
+    color: #d97706;
+    font-weight: bold;
+  }
+  
+  /* Add some spacing between table and card */
+  .stock-card {
+    margin-top: 40px;
+  }
+  

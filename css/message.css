@@ -1,0 +1,109 @@
+  
+  .messages-section {
+    position: absolute;
+    top: 0;
+    left: 17%;
+    width: 80%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    
+   
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .message-card {
+    display: flex;
+    background-color: #fdfdfd;
+    padding: 15px 20px;
+    border-radius: 12px;
+    align-items: flex-start;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .message-card.unread {
+    background-color: #eaf4ff;
+  }
+  
+  .message-card:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #007bff;
+  }
+  
+  .message-content {
+    flex: 1;
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sender-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .stars i {
+    color: #f1c40f;
+    margin-left: 2px;
+    font-size: 14px;
+  }
+  
+  .message-snippet {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 8px 0;
+    line-height: 1.4;
+  }
+  
+  .timestamp {
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .reply-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #4CAF50, #45A049);
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .reply-btn:hover {
+    background: linear-gradient(135deg, #45A049, #3e8e41);
+    transform: scale(1.05);
+  }
+  

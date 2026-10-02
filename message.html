@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages - Grocery Dashboard</title>
+  <link rel="stylesheet" href="css/message.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/salsedash.css.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="img/white-logo.png" alt="">
+      <span class="logo_name">ShopGrocery</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="salesDashBoard.html" >
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="product.html">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Product</span>
+        </a>
+      </li>
+      <li>
+        <a href="order.html">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Order list</span>
+        </a>
+      </li>
+      <li>
+        <a href="analytic.html">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a href="stock.html">
+          <i class='bx bx-coin-stack'></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Total order</span>
+        </a>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="message.html" class="active">
+          <i class='bx bx-message'></i>
+          <span class="links_name">Messages</span>
+          <span class="notify">6</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart'></i>
+          <span class="links_name">Favrorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Setting</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="#" class="log-out" id="log-out" onclick="logout()"">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="Shops/foodcity.jpeg" alt="">
+                <span class="admin_name">Food City</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+    </section>
+  <div class="messages-section">
+    <h2 class="section-title">Customer Messages</h2>
+    <div class="message-list">
+
+      <div class="message-card unread">
+        <img src="images/team/arav.jpeg" alt="Customer" class="avatar">
+        <div class="message-content">
+          <div class="top-row">
+            <h4 class="sender-name">Aarav</h4>
+            <div class="stars">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star-half-alt filled"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="message-snippet">Hi, I need help with my recent order. Can you check?</p>
+          <span class="timestamp">Today, 9:45 AM</span>
+          <button class="reply-btn">Reply</button>
+        </div>
+      </div>
+
+      <div class="message-card">
+        <img src="images/team/naflan.jpeg" alt="Customer" class="avatar">
+        <div class="message-content">
+          <div class="top-row">
+            <h4 class="sender-name">naflan</h4>
+            <div class="stars">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="message-snippet">Do you have fresh strawberries this week?</p>
+          <span class="timestamp">Today, 8:30 AM</span>
+          <button class="reply-btn">Reply</button>
+        </div>
+      </div>
+
+      <div class="message-card">
+        <img src="images/team/priya2.jpeg" alt="Customer" class="avatar">
+        <div class="message-content">
+          <div class="top-row">
+            <h4 class="sender-name">Priya</h4>
+            <div class="stars">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+            </div>
+          </div>
+          <p class="message-snippet">Thanks for the fast delivery! Great service as always.</p>
+          <span class="timestamp">Yesterday, 4:18 PM</span>
+          <button class="reply-btn">Reply</button>
+        </div>
+      </div>
+
+      <div class="message-card">
+        <img src="images/team/rahul.jpeg" alt="Customer" class="avatar">
+        <div class="message-content">
+          <div class="top-row">
+            <h4 class="sender-name">Rahul</h4>
+            <div class="stars">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star-half-alt filled"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="message-snippet">Could you restock the basmati rice soon?</p>
+          <span class="timestamp">Today, 11:10 AM</span>
+          <button class="reply-btn">Reply</button>
+        </div>
+      </div>
+
+      <div class="message-card">
+        <img src="images/team/nisha.jpg" alt="Customer" class="avatar">
+        <div class="message-content">
+          <div class="top-row">
+            <h4 class="sender-name">Nisha</h4>
+            <div class="stars">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star-half-alt filled"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="message-snippet">The packaging was a little damaged. Please check for next time.</p>
+          <span class="timestamp">Yesterday, 6:30 PM</span>
+          <button class="reply-btn">Reply</button>
+        </div>
+      </div>
+
+      <div class="message-card">
+        <img src="images/team/vikram.jpg" alt="Customer" class="avatar">
+        <div class="message-content">
+          <div class="top-row">
+            <h4 class="sender-name">Vikram</h4>
+            <div class="stars">
+              <i class="fas fa-star filled"></i>
+              <i class="fas fa-star filled"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <p class="message-snippet">Delivery was late by 2 days. Not happy with the experience.</p>
+          <span class="timestamp">2 days ago</span>
+          <button class="reply-btn">Reply</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="js/dashboard.js"></script>
+</html>

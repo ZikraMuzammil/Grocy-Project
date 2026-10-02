@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" href="css/order.css">
+    <link rel="stylesheet" href="css/salsedash.css.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <img src="img/white-logo.png" alt="">
+          <span class="logo_name">ShopGrocery</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="salesDashBoard.html" >
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="product.html">
+              <i class='bx bx-box'></i>
+              <span class="links_name">Product</span>
+            </a>
+          </li>
+          <li>
+            <a href="order.html" class="active">
+              <i class='bx bx-list-ul'></i>
+              <span class="links_name">Order list</span>
+            </a>
+          </li>
+          <li>
+            <a href="analytic.html">
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span class="links_name">Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="stock.html">
+              <i class='bx bx-coin-stack'></i>
+              <span class="links_name">Stock</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-book-alt'></i>
+              <span class="links_name">Total order</span>
+            </a>
+          </li>
+          <li>
+            <a href="team.html">
+              <i class='bx bx-user'></i>
+              <span class="links_name">Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="message.html">
+              <i class='bx bx-message'></i>
+              <span class="links_name">Messages</span>
+              <span class="notify">6</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-heart'></i>
+              <span class="links_name">Favrorites</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="links_name">Setting</span>
+            </a>
+          </li>
+          <li class="log_out">
+            <a href="#" class="log-out" id="log-out" onclick="logout()"">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="Shops/foodcity.jpeg" alt="">
+                <span class="admin_name">Food City</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+    </section>
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Customer's Orders</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="images/search.png" alt="">
+            </div>
+            <div class="view-dtl">
+                <a href="pending.html"><button class="view-btn" type="submit">Pending and Delivered </button></a>
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"><i class='bx bxs-file-export'></i></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Location <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Action <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="order-id"> 1 </td>
+                        <td> <img src="images/Zinzu Chan Lee.jpg" alt="" >Hari</td>
+                        <td class="place"> Hatton </td>
+                        <td class="date"> 17 Dec, 2022 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="1"
+                            data-name="Hari"
+                            data-location="Hatton"
+                            data-date="17 Dec, 2022">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 2 </td>
+                        <td><img src="images/Jeet Saru.png" alt=""> Vinoth </td>
+                        <td class="place"> Kandy </td>
+                        <td class="date"> 27 Aug, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="2"
+                            data-name="Vinoth"
+                            data-location="Kandy"
+                            data-date="27 Aug, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 3</td>
+                        <td><img src="images/Sonal Gharti.jpg" alt=""> Abu </td>
+                        <td class="place"> Highrapura </td>
+                        <td class="date" > 14 Mar, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td>  <button class="view-order"
+                            data-id="3"
+                            data-name="Abu"
+                            data-location="Highrapura"
+                            data-date="14 Mar, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 4</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Aravinth </td>
+                        <td class="place"> maskeliya </td>
+                        <td class="date"> 25 May, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="4"
+                            data-name="Aravinth"
+                            data-location="maskeliya"
+                            data-date="25 May, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 5</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Sabi </td>
+                        <td class="place"> Dholaspaha </td>
+                        <td class="date"> 23 Apr, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="5"
+                            data-name="Sabi"
+                            data-location="Dholaspaha"
+                            data-date="23 Apr, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 6</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Mano </td>
+                        <td class="place"> Thalawakale </td>
+                        <td class="date"> 23 Apr, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td>  <button class="view-order"
+                            data-id="6"
+                            data-name="Mano"
+                            data-location="Thalawakale"
+                            data-date="23 Apr, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 7</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Amjad </td>
+                        <td class="place"> Nawalapitiya </td>
+                        <td class="date"> 20 May, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="7"
+                            data-name="Amjad"
+                            data-location="Nawalapitiya"
+                            data-date="20 May, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id" > 8</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Yakoob </td>
+                        <td class="place"> Ulappana </td>
+                        <td class="date"> 30 Feb, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="8"
+                            data-name="Yakoob"
+                            data-location="Ulappana"
+                            data-date="30 Feb, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Ahmad </td>
+                        <td class="place"> Colombo </td>
+                        <td class="date"> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="9"
+                            data-name="Ahmad"
+                            data-location="Colombo"
+                            data-date="22 Dec, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 10</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Naflan </td>
+                        <td class="place"> Kandy </td>
+                        <td class="date"> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <<td>  <button class="view-order"
+                            data-id="10"
+                            data-name="Naflan"
+                            data-location="Kandy"
+                            data-date="22 Dec, 2023" >ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 11</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Yazeen </td>
+                        <td class="place" > Hapusthalawa </td>
+                        <td class="date"> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="11"
+                            data-name="Yazeen"
+                            data-location="Hapusthalawa"
+                            data-date="22 Dec, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 12</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Razeen </td>
+                        <td class="place"> Nawalapitiya </td>
+                        <td class="date"> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled" onclick="cancelOrder(this)">Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="12"
+                            data-name="Razeen"
+                            data-location="Nawalapitiya"
+                            data-date="22 Dec, 2023">ViewOrder</button></td>
+                    </tr>
+                    <tr>
+                        <td class="order-id"> 13</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Akif </td>
+                        <td class="place"> Gampola </td>
+                        <td class="date"> 22 Dec, 2023 </td>
+                        <td class="status-btn">
+                            <p class="status delivered">Confirm</p>
+                            <p class="status cancelled " onclick="cancelOrder(this)"  >Cancel</p>
+                        </td>
+                        <td> <button class="view-order"
+                            data-id="13"
+                            data-name="Akif"
+                            data-location="Gampola"
+                            data-date="22 Dec, 2023">ViewOrder</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+    </main>
+
+    <div class="customer-order">
+        <div class="order-container">
+            <h2 class="order-head">Order #001 Details</h2>
+    
+            <div class="cus-section">
+                <div class="section-title">Order Information</div>
+                <div class="info-grid">
+                    <div><strong>Order Date:</strong> April 13, 2025</div>
+                    <div><strong>Status:</strong> <span class="status-badge pending">Pending</span></div>
+                </div>
+            </div>
+    
+            <div class="cus-section">
+                <div class="section-title">Customer Info</div>
+                <div class="info-grid">
+                    <div><strong>Name:</strong></div>
+                    <div><strong>Phone:</strong> </div>
+                    <div><strong>Address:</strong> </div>
+                </div>
+            </div>
+    
+            <div class="cus-section">
+                <div class="section-title">Ordered Items</div>
+                <table class="cus-table">
+                    <thead>
+                        <tr class="table-tr">
+                            <th class="table-th">Product</th>
+                            <th class="table-th">Quantity</th>
+                            <th class="table-th">Unit Price</th>
+                            <th class="table-th">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-tr">
+                            <td class="table-td">Rice</td>
+                            <td class="table-td">2 kg</td>
+                            <td class="table-td">Rs.1500.00</td>
+                            <td class="table-td">Rs.3000.00</td>
+                        </tr>
+                        <tr class="table-tr">
+                            <td class="table-td">Milk</td>
+                            <td class="table-td">1 L</td>
+                            <td class="table-td">Rs.150.00</td>
+                            <td class="table-td">Rs.150.00</td>
+                        </tr >
+                        <tr class="table-tr">
+                            <td class="table-td">Eggs</td>
+                            <td class="table-td">12 pcs</td>
+                            <td class="table-td">Rs.34.00</td>
+                            <td class="table-td">Rs.408.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="3" class="table-td">Grand Total</td>
+                            <td class="table-td">Rs.3558.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="btn-section">
+                <button class="mark-btn">Mark as Delivered</button>
+                <button class="mark-btn-accepted" >Accepted</button>
+                <button class="mark-btn-close">Close</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+    <script src="js/order.js"></script>
+    <script src="js/dashboard.js"></script>
+</html>

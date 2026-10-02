@@ -1,0 +1,127 @@
+/* Reset & Base */
+
+  
+  .container {
+    top: 0;
+    left: 17%;
+    position: absolute;
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  
+  .search-bar {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  /* Cards */
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  }
+  
+  .title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .value {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4f46e5;
+  }
+  
+  /* Revenue Summary */
+  .summary {
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Chart */
+  .chart-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  /* Table */
+  .table-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .orders-table th {
+    background: #f3f4f6;
+    color: #555;
+    text-transform: uppercase;
+  }
+  
+  /* Status colors */
+  .green {
+    color: #16a34a;
+    font-weight: bold;
+  }
+  
+  .orange {
+    color: #d97706;
+    font-weight: bold;
+  }
+  
+  .red {
+    color: #dc2626;
+    font-weight: bold;
+  }
+  
